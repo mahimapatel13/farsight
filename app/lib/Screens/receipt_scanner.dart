@@ -54,8 +54,8 @@ class _ReceiptScannerScreenState extends State<ReceiptScannerScreen> {
 
     try {
       final model = GenerativeModel(
-          model: 'gemini-2.5-flash',
-          apiKey: 'AIzaSyBDU45fR3pC7naikYhxnMdQTWaSYBJjikA');
+          model: '',
+          apiKey: '');
       final imageBytes = await _image!.readAsBytes();
       final prompt =
           'You are a receipt scanner AI specialized in Indian e-bills. Extract only purchased item names and their exact amounts. Ignore headers, totals, taxes, addresses, and irrelevant text. Output one item per line in the format: Item Name — Amount. Examples: Shaft — 5310, Brake Disc — 1534. Do not add explanations or extra text.';
